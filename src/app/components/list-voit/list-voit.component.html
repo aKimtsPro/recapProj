@@ -1,0 +1,8 @@
+
+<label for="search">search : </label><br>
+<input type="text" [(ngModel)]="startingString" id="search"><br>
+<label for="couleur">couleur : </label><br>
+<input type="color" [(ngModel)]="voitColor" id="couleur">
+<ul>
+    <li *ngFor="let voit of (listVoiture | filter:startingString)" [ngStyle]="{'color': voit.couleur}" [appHighlight]="voitColor">{{ voit | voiture }}</li>
+</ul>

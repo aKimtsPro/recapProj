@@ -1,0 +1,14 @@
+
+<div class="container" [appHighlight]="'green'" *ngIf="!isLogged()">
+    <form [formGroup]="loginForm">
+        <label for="username">username</label><br>
+        <input type="text" id="username" formControlName="username" placeholder="taille >= 5"><br>
+        <label for="pswd"> password </label><br>
+        <input type="password" id="pswd" formControlName="pswd" placeholder="password"><br>
+        <button (click)="onSubmit()">submit</button>
+    </form>
+
+    <div *ngIf="successOnce">
+        <p>{{ loginForm.value | json | titrifier }}</p>
+    </div>
+</div>
