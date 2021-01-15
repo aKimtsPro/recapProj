@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "recapProj"
+    }
+  },
+  "defaultProject": "recapProj",
+  "cli": {
+    "analytics": "9f1dff98-644f-44bd-a58e-b374a782f0a3"
+  }
 }

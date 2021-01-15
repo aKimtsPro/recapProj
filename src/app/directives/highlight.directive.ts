@@ -18,9 +18,6 @@ export class HighlightDirective {
   }
 
   constructor(private el: ElementRef) {
-    let toAdd = document.createElement('a');
-    toAdd.innerText = "salut"
-    el.nativeElement.append(toAdd);
   }
 
 }

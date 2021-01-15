@@ -1,8 +1,32 @@
 
-<label for="search">search : </label><br>
-<input type="text" [(ngModel)]="startingString" id="search"><br>
-<label for="couleur">couleur : </label><br>
-<input type="color" [(ngModel)]="voitColor" id="couleur">
-<ul>
-    <li *ngFor="let voit of (listVoiture | filter:startingString)" [ngStyle]="{'color': voit.couleur}" [appHighlight]="voitColor">{{ voit | voiture }}</li>
-</ul>
+
+
+
+<div id="list-voit-container">
+
+    <app-voiture-form (add-event)="onAdd($event)"></app-voiture-form>
+
+
+    <div class="row search-field">
+        <label for="search" class="col-1">search : </label>
+        <input type="text" [(ngModel)]="startingString" id="search" class="col-4">
+        <label for="couleur" class="col-1">couleur : </label>
+        <input type="color" [(ngModel)]="voitColor" id="couleur" class="col-4">
+        <button class="btn btn-success col-1" (click)="subscribe()">sub</button>
+        <button class="btn btn-info col-1" (click)="reload()">reload</button>
+    </div>
+    
+    <div class="row">
+        <div class="col-8">
+            <ul>
+                <li *ngFor="let voit of (listVoiture | filter:startingString)" [ngStyle]="{'color': voit.couleur}" [appHighlight]="voitColor">{{ voit | voiture }}</li>
+            </ul>
+        </div>
+        <div class="col-4 bg-light">
+            <ul>
+                <li *ngFor="let marque of marqueList">{{ marque }}</li>
+            </ul>
+        </div>
+    </div>
+    
+</div>

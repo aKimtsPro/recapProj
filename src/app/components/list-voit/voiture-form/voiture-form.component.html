@@ -1,0 +1,19 @@
+<form [formGroup]="voitureForm" (submit)="onSubmit()">
+  <label for="marque">marque</label>
+  <br>
+  <input type="text" id="marque" formControlName="marque">
+  <br>
+  <label for="modele">modele</label>
+  <br>
+  <input type="text" id="modele" formControlName="model">
+  <br>
+  <label for="immatriculation">immatriculation</label>
+  <br>
+  <input type="text" id="immatriculation" formControlName="immatriculation">
+  <br>
+  <label for="couleur">couleur</label>
+  <br>
+  <input type="color" id="couleur" formControlName="couleur">
+  <br>
+  <button type="submit" class="btn btn-success">submit</button>
+</form>

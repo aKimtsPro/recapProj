@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListVoitComponent } from './components/list-voit/list-voit.component';
 import { LoginComponent } from './components/login/login.component';
+import { ObsDemoComponent } from './components/obs-demo/obs-demo.component';
 import { RecapBaseComponent } from './components/recap-base/recap-base.component';
 
 const routes: Routes = [
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'login', component: LoginComponent
+  },
+  {
+    path: 'obs', component: ObsDemoComponent
   }
 ];
 
